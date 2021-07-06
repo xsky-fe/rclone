@@ -544,7 +544,8 @@ func fillInMissingSizes(total, used, free, unknownFree int64) (newTotal, newUsed
 }
 
 // If the total size isn't known then we will aim for this many bytes free (1PB)
-const unknownFreeBytes = 1 << 50
+// XSKY PORT (50GB)
+const unknownFreeBytes = 50 * (1 << 30)
 
 // Statfs returns into about the filing system if known
 //
